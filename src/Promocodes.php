@@ -1,19 +1,19 @@
 <?php
 
-namespace Zorb\Promocodes;
+namespace Osoobe\Promocodes;
 
-use Zorb\Promocodes\Exceptions\PromocodeAlreadyUsedByUserException;
-use Zorb\Promocodes\Exceptions\PromocodeBoundToOtherUserException;
-use Zorb\Promocodes\Exceptions\UserHasNoAppliesPromocodeTrait;
-use Zorb\Promocodes\Exceptions\PromocodeDoesNotExistException;
-use Zorb\Promocodes\Exceptions\PromocodeNoUsagesLeftException;
-use Zorb\Promocodes\Exceptions\UserRequiredToAcceptPromocode;
-use Zorb\Promocodes\Exceptions\PromocodeExpiredException;
-use Zorb\Promocodes\Contracts\PromocodeUserContract;
-use Zorb\Promocodes\Events\GuestAppliedPromocode;
-use Zorb\Promocodes\Events\UserAppliedPromocode;
-use Zorb\Promocodes\Contracts\PromocodeContract;
-use Zorb\Promocodes\Traits\AppliesPromocode;
+use Osoobe\Promocodes\Exceptions\PromocodeAlreadyUsedByUserException;
+use Osoobe\Promocodes\Exceptions\PromocodeBoundToOtherUserException;
+use Osoobe\Promocodes\Exceptions\UserHasNoAppliesPromocodeTrait;
+use Osoobe\Promocodes\Exceptions\PromocodeDoesNotExistException;
+use Osoobe\Promocodes\Exceptions\PromocodeNoUsagesLeftException;
+use Osoobe\Promocodes\Exceptions\UserRequiredToAcceptPromocode;
+use Osoobe\Promocodes\Exceptions\PromocodeExpiredException;
+use Osoobe\Promocodes\Contracts\PromocodeUserContract;
+use Osoobe\Promocodes\Events\GuestAppliedPromocode;
+use Osoobe\Promocodes\Events\UserAppliedPromocode;
+use Osoobe\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Traits\AppliesPromocode;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -251,7 +251,9 @@ class Promocodes
             event(new GuestAppliedPromocode($this->promocode));
         }
 
-        $this->promocode->decrement('usages_left');
+        if (!$this->promocode->isUnlimited()) {
+            $this->promocode->decrement('usages_left');
+        }
 
         return $this->promocode;
     }

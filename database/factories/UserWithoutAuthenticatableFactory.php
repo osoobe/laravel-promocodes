@@ -1,8 +1,8 @@
 <?php
 
-namespace Zorb\Promocodes\Database\Factories;
+namespace Osoobe\Promocodes\Database\Factories;
 
-use Zorb\Promocodes\Tests\Models\UserWithoutAuthenticatable;
+use Osoobe\Promocodes\Tests\Models\UserWithoutAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;

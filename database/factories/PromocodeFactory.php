@@ -1,10 +1,10 @@
 <?php
 
-namespace Zorb\Promocodes\Database\Factories;
+namespace Osoobe\Promocodes\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
-use Zorb\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Models\Promocode;
 use Carbon\CarbonInterface;
 
 /**

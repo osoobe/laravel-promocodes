@@ -1,6 +1,6 @@
 <?php
 
-use Zorb\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Models\Promocode;
 
 it('should return available promocodes', function () {
     Promocode::factory()->expired()->count(5)->create();

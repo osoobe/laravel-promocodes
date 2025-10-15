@@ -1,9 +1,9 @@
 <?php
 
-use Zorb\Promocodes\Contracts\PromocodeContract;
-use Zorb\Promocodes\Facades\Promocodes;
-use Zorb\Promocodes\Models\Promocode;
-use Zorb\Promocodes\Tests\Models\User;
+use Osoobe\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Tests\Models\User;
 
 it('should return promocodes applied by user', function () {
     $user = User::factory()->create();

@@ -1,9 +1,9 @@
 <?php
 
-namespace Zorb\Promocodes\Commands;
+namespace Osoobe\Promocodes\Commands;
 
 use Illuminate\Console\Command;
-use Zorb\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Contracts\PromocodeContract;
 
 class Expire extends Command
 {

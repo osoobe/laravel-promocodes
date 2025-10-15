@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Zorb\Promocodes\Tests\TestCase;
+use Osoobe\Promocodes\Tests\TestCase;
 use Pest\PendingObjects\TestCall;
 
 /*

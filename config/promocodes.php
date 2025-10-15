@@ -3,7 +3,7 @@
 return [
     'models' => [
         'promocodes' => [
-            'model' => \Zorb\Promocodes\Models\Promocode::class,
+            'model' => \Osoobe\Promocodes\Models\Promocode::class,
             'table_name' => 'promocodes',
             'foreign_id' => 'promocode_id',
         ],
@@ -15,7 +15,7 @@ return [
         ],
 
         'pivot' => [
-            'model' => \Zorb\Promocodes\Models\PromocodeUser::class,
+            'model' => \Osoobe\Promocodes\Models\PromocodeUser::class,
             'table_name' => 'promocode_user',
         ],
     ],

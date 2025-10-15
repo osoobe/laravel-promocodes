@@ -1,9 +1,9 @@
 <?php
 
-namespace Zorb\Promocodes\Database\Factories;
+namespace Osoobe\Promocodes\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Zorb\Promocodes\Tests\Models\UserWithoutTrait;
+use Osoobe\Promocodes\Tests\Models\UserWithoutTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 

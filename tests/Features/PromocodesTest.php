@@ -3,7 +3,7 @@
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Zorb\Promocodes\Exceptions\{
+use Osoobe\Promocodes\Exceptions\{
     PromocodeAlreadyUsedByUserException,
     PromocodeBoundToOtherUserException,
     PromocodeDoesNotExistException,
@@ -12,12 +12,12 @@ use Zorb\Promocodes\Exceptions\{
     UserHasNoAppliesPromocodeTrait,
     UserRequiredToAcceptPromocode
 };
-use Zorb\Promocodes\Tests\Models\{User, UserWithoutTrait, UserWithoutAuthenticatable};
-use Zorb\Promocodes\Contracts\PromocodeContract;
-use Zorb\Promocodes\Facades\Promocodes;
-use Zorb\Promocodes\Models\Promocode;
-use Zorb\Promocodes\Models\PromocodeUser;
-use Zorb\Promocodes\Rules\ValidPromocode;
+use Osoobe\Promocodes\Tests\Models\{User, UserWithoutTrait, UserWithoutAuthenticatable};
+use Osoobe\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Models\PromocodeUser;
+use Osoobe\Promocodes\Rules\ValidPromocode;
 
 it('should set code to variable, but not promocode', function () {
     $code = 'FOO-BAR';
@@ -27,7 +27,7 @@ it('should set code to variable, but not promocode', function () {
     $classCode = $class->getProperty('code')->getValue($promocode);
     $classPromocode = $class->getProperty('promocode')->getValue($promocode);
 
-    expect($promocode)->toBeInstanceOf(\Zorb\Promocodes\Promocodes::class);
+    expect($promocode)->toBeInstanceOf(\Osoobe\Promocodes\Promocodes::class);
     expect($classCode)->toEqual($code);
     expect($classPromocode)->toBeNull();
 });

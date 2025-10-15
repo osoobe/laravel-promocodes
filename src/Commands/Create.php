@@ -1,10 +1,10 @@
 <?php
 
-namespace Zorb\Promocodes\Commands;
+namespace Osoobe\Promocodes\Commands;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
-use Zorb\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Facades\Promocodes;
 
 class Create extends Command
 {
