@@ -1,9 +1,9 @@
 <?php
 
-namespace Zorb\Promocodes\Tests\Models;
+namespace Osoobe\Promocodes\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Zorb\Promocodes\Traits\AppliesPromocode;
+use Osoobe\Promocodes\Traits\AppliesPromocode;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class UserWithoutAuthenticatable extends Model

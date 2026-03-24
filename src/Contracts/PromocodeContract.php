@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorb\Promocodes\Contracts;
+namespace Osoobe\Promocodes\Contracts;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

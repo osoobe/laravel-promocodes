@@ -1,8 +1,8 @@
 <?php
 
-use Zorb\Promocodes\Models\PromocodeUser;
-use Zorb\Promocodes\Tests\Models\User;
-use Zorb\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Models\PromocodeUser;
+use Osoobe\Promocodes\Tests\Models\User;
+use Osoobe\Promocodes\Models\Promocode;
 
 it('should apply promocode with given code', function () {
     $code = 'ABC-DEF';

@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorb\Promocodes\Contracts;
+namespace Osoobe\Promocodes\Contracts;
 
 interface PromocodeUserContract
 {

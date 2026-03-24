@@ -1,7 +1,7 @@
 <?php
 
-use Zorb\Promocodes\Tests\Models\User;
-use Zorb\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Tests\Models\User;
+use Osoobe\Promocodes\Models\Promocode;
 use Illuminate\Support\Str;
 
 it('should create codes in database', function () {

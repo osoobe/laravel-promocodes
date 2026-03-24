@@ -27,7 +27,7 @@ composer require zgabievi/laravel-promocodes
 ## Configuration
 
 ```bash
-php artisan vendor:publish --provider="Zorb\Promocodes\PromocodesServiceProvider"
+php artisan vendor:publish --provider="Osoobe\Promocodes\PromocodesServiceProvider"
 ```
 
 Now you can change configurations as you need:
@@ -36,7 +36,7 @@ Now you can change configurations as you need:
 return [
     'models' => [
         'promocodes' => [
-            'model' => \Zorb\Promocodes\Models\Promocode::class,
+            'model' => \Osoobe\Promocodes\Models\Promocode::class,
             'table_name' => 'promocodes',
             'foreign_id' => 'promocode_id',
         ],
@@ -48,7 +48,7 @@ return [
         ],
 
         'pivot' => [
-            'model' => \Zorb\Promocodes\Models\PromocodeUser::class,
+            'model' => \Osoobe\Promocodes\Models\PromocodeUser::class,
             'table_name' => 'promocode_user',
         ],
     ],
@@ -69,7 +69,7 @@ Now you will need to use AppliesPromocode on your user model.
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Zorb\Promocodes\Traits\AppliesPromocode;
+use Osoobe\Promocodes\Traits\AppliesPromocode;
 
 class User extends Authenticatable {
     use AppliesPromocode;
@@ -111,7 +111,7 @@ It's very easy to use. Methods are combined, so that you can configure promocode
 Combine methods as you need. You can skip any method that you don't need, most of them already have default values.
 
 ```php
-use Zorb\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Facades\Promocodes;
 
 Promocodes::mask('AA-***-BB') // default: config('promocodes.code_mask')
           ->characters('ABCDE12345') // default: config('promocodes.allowed_symbols')
@@ -168,7 +168,7 @@ php artisan promocodes:create\
 If you want to output promocodes and not save them to database, you can call generate method instead of create.
 
 ```php
-use Zorb\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Facades\Promocodes;
 
 Promocodes::mask('AA-***-BB') // default: config('promocodes.code_mask')
           ->characters('ABCDE12345') // default: config('promocodes.allowed_symbols')
@@ -190,7 +190,7 @@ Promocodes::mask('AA-***-BB') // default: config('promocodes.code_mask')
 Combine methods as you need. You can skip any method that you don't need.
 
 ```php
-use Zorb\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Facades\Promocodes;
 
 Promocodes::code('ABC-DEF')
           ->user(User::find(1)) // default: null
@@ -221,7 +221,7 @@ php artisan promocodes:apply ABC-DEF --user=1
 While trying to apply promocode, you should be aware of exceptions. Most part of the code throws exceptions, when there is a problem:
 
 ```php
-// Zorb\Promocodes\Exceptions\*
+// Osoobe\Promocodes\Exceptions\*
 
 PromocodeAlreadyUsedByUserException - "The given code `ABC-DEF` is already used by user with id 1."
 PromocodeBoundToOtherUserException - "The given code `ABC-DEF` is bound to other user, not user with id 1."
@@ -237,7 +237,7 @@ UserRequiredToAcceptPromocode - "The given code `ABC-DEF` requires to be used by
 There are two events which are fired upon applying.
 
 ```php
-// Zorb\Promocodes\Events\*
+// Osoobe\Promocodes\Events\*
 
 GuestAppliedPromocode // Fired when guest applies promocode
     // It has public variable: promocode

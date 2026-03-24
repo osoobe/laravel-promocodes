@@ -1,8 +1,8 @@
 <?php
 
-use Zorb\Promocodes\Exceptions\PromocodeDoesNotExistException;
-use Zorb\Promocodes\Contracts\PromocodeContract;
-use Zorb\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Exceptions\PromocodeDoesNotExistException;
+use Osoobe\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Facades\Promocodes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Carbon\CarbonInterface;

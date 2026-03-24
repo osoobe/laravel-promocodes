@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorb\Promocodes\Facades;
+namespace Osoobe\Promocodes\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Zorb\Promocodes\Commands;
+namespace Osoobe\Promocodes\Commands;
 
-use Zorb\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Facades\Promocodes;
 use Illuminate\Console\Command;
 
 class Apply extends Command

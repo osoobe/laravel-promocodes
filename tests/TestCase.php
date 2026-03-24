@@ -1,13 +1,13 @@
 <?php
 
-namespace Zorb\Promocodes\Tests;
+namespace Osoobe\Promocodes\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Session;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Zorb\Promocodes\PromocodesServiceProvider;
+use Osoobe\Promocodes\PromocodesServiceProvider;
 use Illuminate\Support\Facades\Schema;
-use Zorb\Promocodes\Tests\Models\User;
+use Osoobe\Promocodes\Tests\Models\User;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
         $this->setUpDatabase();
 
         Factory::guessFactoryNamesUsing(
-            fn(string $modelName) => 'Zorb\\Promocodes\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn(string $modelName) => 'Osoobe\\Promocodes\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

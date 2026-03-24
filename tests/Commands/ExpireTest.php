@@ -1,8 +1,8 @@
 <?php
 
-use Zorb\Promocodes\Exceptions\PromocodeExpiredException;
-use Zorb\Promocodes\Facades\Promocodes;
-use Zorb\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Exceptions\PromocodeExpiredException;
+use Osoobe\Promocodes\Facades\Promocodes;
+use Osoobe\Promocodes\Models\Promocode;
 
 it('should throw exception when promocode is expired', function () {
     $code = 'ABC-DEF';

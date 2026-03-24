@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorb\Promocodes\Exceptions;
+namespace Osoobe\Promocodes\Exceptions;
 
 use InvalidArgumentException;
 

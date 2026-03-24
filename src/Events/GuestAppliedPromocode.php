@@ -1,9 +1,9 @@
 <?php
 
-namespace Zorb\Promocodes\Events;
+namespace Osoobe\Promocodes\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Zorb\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Contracts\PromocodeContract;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 

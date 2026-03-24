@@ -1,13 +1,13 @@
 <?php
 
-namespace Zorb\Promocodes;
+namespace Osoobe\Promocodes;
 
-use Zorb\Promocodes\Contracts\PromocodeUserContract;
-use Zorb\Promocodes\Contracts\PromocodeContract;
+use Osoobe\Promocodes\Contracts\PromocodeUserContract;
+use Osoobe\Promocodes\Contracts\PromocodeContract;
 use Illuminate\Support\ServiceProvider;
-use Zorb\Promocodes\Commands\Expire;
-use Zorb\Promocodes\Commands\Create;
-use Zorb\Promocodes\Commands\Apply;
+use Osoobe\Promocodes\Commands\Expire;
+use Osoobe\Promocodes\Commands\Create;
+use Osoobe\Promocodes\Commands\Apply;
 
 class PromocodesServiceProvider extends ServiceProvider
 {

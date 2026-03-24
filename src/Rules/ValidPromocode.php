@@ -1,9 +1,9 @@
 <?php
 
-namespace Zorb\Promocodes\Rules;
+namespace Osoobe\Promocodes\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Zorb\Promocodes\Models\Promocode;
+use Osoobe\Promocodes\Models\Promocode;
 
 class ValidPromocode implements Rule
 {

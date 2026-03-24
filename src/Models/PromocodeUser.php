@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorb\Promocodes\Models;
+namespace Osoobe\Promocodes\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 

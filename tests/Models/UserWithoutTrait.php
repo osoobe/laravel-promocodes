@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorb\Promocodes\Tests\Models;
+namespace Osoobe\Promocodes\Tests\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

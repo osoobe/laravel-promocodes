@@ -1,10 +1,10 @@
 <?php
 
-namespace Zorb\Promocodes\Tests\Models;
+namespace Osoobe\Promocodes\Tests\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Zorb\Promocodes\Traits\AppliesPromocode;
+use Osoobe\Promocodes\Traits\AppliesPromocode;
 
 class User extends Authenticatable
 {
